@@ -1,0 +1,19 @@
+---
+title: "Programa de Prevención & Control del Dengue: 14 Jalisco| 2024"
+format: 
+  dashboard:
+      scrolling: true
+      logo: https://www.gob.mx/cms/uploads/action_program/main_image/26942/post_post_portadavectores.gif
+      nav-buttons: [twitter, github, facebook]
+theme: custom.scss
+---
+
+```{r setup}
+library(sf)
+mapview::mapviewOptions(default = TRUE,
+                        basemaps.color.shuffle = FALSE)
+load("/Users/felipedzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2024/8.RData/denmex_2024.RData")
+```
+
+
+# [**Escenarios Epidemiológicos**]{style="font-size:8pt"}
