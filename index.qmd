@@ -17,3 +17,59 @@ load("/Users/felipedzul/Library/CloudStorage/OneDrive-Personal/proyects/geocodin
 
 
 # [**Escenarios Epidemiológicos**]{style="font-size:8pt"}
+
+
+::: panel-tabset
+
+### [**Panorama Epidemiológico**]{style="color:#990000"}
+
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<div >
+  <h2></h2>
+  <p></p>
+
+<div style = "display: grid; width: 1px; grid-template-columns: 550px 550px; align-items: start; justify-content: space-between;">
+
+#### **<span style="color:blue"> Treemap Nacional </span>**
+```{r treemap_national, out.width="100%", out.height="100%"}
+path_sinave <- "/Users/felipedzul/Library/CloudStorage/OneDrive-Personal/datasets/DGE/denv/2024/DENGUE2_.txt"
+x <- data.table::fread(path_sinave,
+                       #select = vect_cols2,
+                       encoding = "Latin-1",
+                       quote="",
+                       fill=TRUE)
+
+densnv::mp_treemap(country = TRUE,
+                   snv_dataset = x)
+```
+
+<div>
+
+#### **<span style="color:blue"> Treemap Estatal </span>**
+```{r treemap_estatal,out.width="100%", out.height="100%"}
+path_sinave <- "/Users/felipedzul/Library/CloudStorage/OneDrive-Personal/datasets/DGE/denv/2024/DENGUE2_.txt"
+x <- data.table::fread(path_sinave,
+                       #select = vect_cols2,
+                       encoding = "Latin-1",
+                       quote="",
+                       fill=TRUE)
+densnv::mp_treemap(country = FALSE,
+                   cve_edo = "11",
+                   snv_dataset = x)
+```
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
+
+
+:::
