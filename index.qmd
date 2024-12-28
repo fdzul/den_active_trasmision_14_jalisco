@@ -59,7 +59,7 @@ x <- data.table::fread(path_sinave,
                        quote="",
                        fill=TRUE)
 densnv::mp_treemap(country = FALSE,
-                   cve_edo = "11",
+                   cve_edo = "14",
                    snv_dataset = x)
 ```
 </div>
